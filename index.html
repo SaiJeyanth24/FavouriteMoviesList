@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Movies</title>
+    <link rel="stylesheet" href="./Styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <script src="./Scripts/index.js" defer></script>
+</head>
+<body>
+    <div class="backdrop"></div>
+    <nav>
+        <p>Favourite Movies</p>
+        <button>Add movies</button>
+    </nav>
+    <div class="default modal">
+        <h1>Your favourite  movies database!</h1>
+    </div>
+    <div class="list">
+        <p>Click 'Add movies' to add your favourite movies.</p>
+        <ul class="items"></ul>
+    </div>
+    <div class="form modal">
+        <label for="movie-title">Movie title</label><br>
+        <input type="text" id="movie-title" name="movie-title"><br>
+        <label for="image-url">Image URL</label><br>
+        <input type="text" id="image-url" name="image-url"><br>
+        <label for="rating">Rating</label><br>
+        <input type="number" id="rating" name="rating" min="1" max="5"><br>
+        <button class="btn --cancel">Cancel</button>
+        <button class="btn --add">Add</button>
+    </div>
+    <div class="confirm modal">
+        <h2>Are you sure?</h2>
+        <p>Are you sure you want to delete this item? This action can't be made undone!</p>
+        <button class="btn --cancel">No</button>
+        <button class="btn --add">Yes</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+body{
+    margin: 0;
+    font-size: 18px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 70px;
+}
+
+nav > *{
+    margin: auto 15px;
+}
+
+nav >p{
+    font-family: 'Abril Fatface', serif;
+    font-size: 30px;
+    color: white;
+}
+
+nav > button{
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 7px;
+    border-width: 1px;
+    background-color: yellow;
+    height: 40px;
+    width: 105px;
+}
+
+nav > button:hover{
+    cursor: pointer;
+}
+
+nav > button:active{
+    width: 104px;
+    height: 39px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    position: static;
+}
+
+ul img{
+    float: left;
+    width: 120px;
+    height: 130px;
+    border-radius: 10px 8px 8px 10px;
+}
+
+ul > .modal{
+    position: static;
+    width: 100%;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    pointer-events: none;
+    z-index: 10;
+    display:none;
+}
+
+.backdrop.visible{
+    display: block;
+}
+
+
+.modal.visible{
+    z-index:100;
+    animation: fade-slide-in 0.4s ease-out forwards;
+    display: block;
+    
+}
+
+.default{
+    top: 5vh;
+}
+
+.default.modal{
+    position: relative;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.form{
+    top: 30vh;
+    padding: 20px;
+    display: none;
+}
+
+.form > label{
+    font-size: large;
+    font-family: sans-serif;
+}
+
+.form > input{
+    margin-top: 5px;
+    margin-bottom: 8px;
+    width: 98%;
+    height: 25px;
+    font-size: large;
+}
+
+.form > button{
+    position: relative;
+    left: 500px;
+    top: 10px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+/* 
+.form.modal.visible-animation{
+    z-index: 100;
+    display: block;
+    animation: fade-slide-in 0.3s ease-out forwards;
+} */
+
+.confirm{
+    top: 40vh;
+    display: none;
+}
+
+/* .confirm.visible{
+    z-index:100;
+    animation: fade-slide-in 0.4s ease-out forwards;
+    display: block;
+} */
+
+.confirm > p{
+    margin-top: 25px;
+    padding-left: 15px;
+}
+
+.confirm > h2{
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 15px;
+    height: 40px;
+}
+
+.confirm > button{
+    position: relative;
+    left: 500px;
+    top: 5px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.btn{
+    border-radius: 5px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+    border-width: 1px;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+}
+
+.--add{
+    background-color: black;
+    color: white;
+}
+
+.--cancel{
+    background-color: white;
+    border: 0px;
+    box-shadow: none;
+}
+
+.--add:hover{
+    cursor: pointer;
+    background-color: yellow;
+    color: black;
+}
+
+.--cancel:hover{
+    background-color: #EF9A9A;
+    cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    background: white;
+    border-radius: 10px;
+    width: 60%;
+    left: 20%;
+    box-shadow: 0 2px  8px rgba(0, 0, 0, 0.26);
+}
+
+.default > h1{
+    text-align: center;
+}
+
+.list{
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    width: 50%;
+    top: 8vh;
+    left: 20%;
+    padding: 10px;
+}
+
+.list >p{
+    color: #bec4c9;
+    font-family: sans-serif;
+}
+
+#movie-name{
+    display: inline-block;
+    position: relative;
+    left: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#user-rating{
+    display: inline-block;
+    position: relative;
+    left: 40px;
+}
+
+#change{
+    display: inline-block;
+    position: relative;
+    left: 60%;
+    top: 28px;
+
+}
+
+#change > *{
+    margin: 0 7px;
+    font-size: 20px;
+}
+
+#edit-logo:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+#delete-logo:hover{
+    color: red;
+    cursor: pointer;
+}
+
