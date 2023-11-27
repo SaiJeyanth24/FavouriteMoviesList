@@ -1,7 +1,7 @@
 const addMovieModal=document.querySelector('nav button');
 const backDrop=addMovieModal.parentElement.previousElementSibling;
 const formModal=document.querySelector('.form');
-const addMovieList=formModal.lastElementChild;
+const addMovieList=formModal.lastElementChild.lastElementChild;
 const cancelMovieList=addMovieList.previousElementSibling;
 const movieTitle=document.getElementById('movie-title');
 const imageURL=document.getElementById('image-url');

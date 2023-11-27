@@ -113,13 +113,13 @@ ul > .modal{
     font-size: large;
 }
 
-.form > button{
+/* .form > button{
     position: relative;
     left: 500px;
     top: 10px;
     margin-left: 25px;
     margin-bottom: 5px;
-}
+} */
 /* 
 .form.modal.visible-animation{
     z-index: 100;
@@ -153,13 +153,13 @@ ul > .modal{
     height: 40px;
 }
 
-.confirm > button{
+/* .confirm > button{
     position: relative;
     left: 500px;
     top: 5px;
     margin-left: 25px;
     margin-bottom: 15px;
-}
+} */
 
 .btn{
     border-radius: 5px;
@@ -256,5 +256,15 @@ ul > .modal{
 #delete-logo:hover{
     color: red;
     cursor: pointer;
+}
+
+.btn-tab{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 5px;
 }
 
