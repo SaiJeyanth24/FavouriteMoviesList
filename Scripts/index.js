@@ -16,6 +16,21 @@ let count=0;
 
 let runningItemNode='';
 let runningItemObj='';
+// let updateFlag=false;
+
+const updatedMovieListener = () =>{
+    console.log(runningItemNode);
+    const updatedMovie = {
+        name: movieTitle.value,
+        url: imageURL.value,
+        rated: rating.value,
+    }
+    count--;
+    // updateFlag=true;
+    runningItemNode.remove();
+    displayMovieList(updatedMovie);
+    removeMovieModal();
+}
 
 const removeConfirmModal = () =>{
     backDrop.classList.remove('visible');
@@ -28,10 +43,13 @@ const deleteItem = (item) =>{
     runningItemNode=item;
 }
 
-const editItem = (movieData) =>{
+const editItem = (movieData,node) =>{
     movieTitle.value=movieData.name;
     imageURL.value=movieData.url;
     rating.value=movieData.rated;
+    runningItemNode=node;
+    addMovieList.removeEventListener('click',addMovieListener);
+    addMovieList.addEventListener('click',updatedMovieListener);
     backDrop.classList.add('visible');
     formModal.classList.add('visible');
 }
@@ -81,17 +99,22 @@ const displayMovieList = (movie) =>{
     ul.append(newLi);
 
     newEdit.addEventListener('click',() =>{
-        editItem(movie);
+        editItem(movie,newLi);
     });
     newDelete.addEventListener('click',() =>{
         deleteItem(newLi);
     });
+
+    // if(updateFlag)
+    // runningItemNode.replace(newLi);
 }
 
 
 const addMovieModalListener = () =>{
     backDrop.classList.add('visible');
     formModal.classList.add('visible');
+    addMovieList.removeEventListener('click',updatedMovieListener);
+    addMovieList.addEventListener('click',addMovieListener);
 }
 
 const removeMovieModal = () =>{
