@@ -27,6 +27,12 @@ const updatedMovieListener = () =>{
     }
     count--;
     // updateFlag=true;
+    addMovieList.removeEventListener('click',updatedMovieListener);
+    addMovieList.addEventListener('click',addMovieListener);
+    movieTitle.value='';
+    imageURL.value='';
+    rating.value='';
+    console.log('updated');
     runningItemNode.remove();
     displayMovieList(updatedMovie);
     removeMovieModal();
